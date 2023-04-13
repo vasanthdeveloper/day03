@@ -1,0 +1,103 @@
+1.for vs for-in
+ANSWER:
+FOR:
+ var arr=["apple","orange","mango","pineapple"];
+for(var i=0;i<arr.length;i++){
+    console.log(arr[i]);
+}
+output:["apple","orange","mango","pineapple"]
+FOR IN: 
+ for(var i in arr){
+     console.log(arr[i]);
+ }
+output:["apple","orange","mango","pineapple"]
+var student={
+    name:"john",
+    age:25,
+    city:"chennai"
+}
+ 
+ for(var i in student){
+     console.log(i);
+ }
+OUTPUT:name
+       age
+       city
+ for(var i in student){
+     console.log(i,student[i]);
+ }
+OUTPUT:
+    name john
+    age 25
+    city chennai
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Create your own resume data in json format.
+ANSWER:
+ let resume={
+      "name":  "vasanth",
+      "email": "vasanthmodern09@gmail.com",
+      "phone": 8608965489,
+      "location":{
+          "plot_no": "8/890",
+          "address": "gandhi nagar",
+          "area": "tiruttani",
+          "city": "tiruvallur"
+      },
+      "objective": "A resume objective is an eye-catching statement of your career intent that's placed on top of your resume. The resume objective provides a 2-3 sentence snapshot of your professional experience, skills, and achievements, and explains why they make you the right candidate for the job.",
+      "education":[
+          {
+              "college":{
+              "names":"PBCE",
+              "place": "irungatukottai",
+              "year": "2017-2021"
+              }
+          },
+          {
+              "school":{
+              "name":"GOVT",
+              "year":"2016-2017"
+              }
+          }
+          ],
+      "skills":[
+          {
+            "java":{
+                "skill1":"loops",
+                "skill2":"oops",
+                "skill3":"arrays",
+                "skill4":"collections"
+            },
+            "sql":{
+                "skill1":"DSM",
+                "skill2":"DAM"
+            }
+          }
+          ]
+      "languages":"English,Tamil"
+    
+  }
+  console.log(resume.location.address);//gandhi nagar
+  console.log(resume.skills[0].java.skill3);//arrays
+  console.log(resume.languages);//English,Tamil
+  console.log(resume.education[0].college.place);//irungatukottai
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Difference between window,screen and document in javascript
+ANSWER:-In JavaScript, document, screen, and window are all built-in objects that are used to interact with the web page and the browser.
+However, they represent different aspects of the web page and the browser.
+DOCUMENT:
+         The document object represents the HTML document that is currently loaded in the web page. 
+It provides access to the HTML elements in the document and allows you to manipulate them dynamically using JavaScript. 
+For example, you can use the document.getElementById() method to retrieve an element by its ID and modify its content.
+SCREEN:
+       The screen object represents the physical screen of the device that is displaying the web page. 
+It provides information about the screen size, resolution, and color depth. 
+You can use the screen.width and screen.height properties to retrieve the dimensions of the screen.
+WINDOW:
+       The window object represents the browser window that contains the web page. 
+It provides access to the methods and properties of the browser window, such as window.open() and window.close(). 
+It also provides information about the browser, such as the URL of the current page (window.location.href) and the browser's history (window.history).
+
+In summary, document is used to manipulate the content of the HTML document, 
+screen is used to retrieve information about the physical screen, 
+and window is used to interact with the browser window and retrieve information about the browser.
